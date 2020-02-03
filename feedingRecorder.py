@@ -17,9 +17,10 @@ def generateMsg(ops):
     msg = None
     if(ops == 1):
         breastfeeding = input("what is the  amount of the breastfeeding milk this time? \n")
+        breastfeedingTime = input("how long have you fed your baby (min) ? \n")
         formula = input("what is the amount of the formula this time? \n")
         total = formula + breastfeeding
-        msg = "{date}: baby is fed: breastfeeding: {breastfeeding} ml; formula: {formula} ml; total: {total} ml  \n".format(date = dates, breastfeeding=breastfeeding, formula=formula, total=total)
+        msg = "{date}: baby is fed: breastfeeding: {breastfeeding} oz; formula: {formula} oz; total: {total} oz; breastfeeding(time): {time} mins \n".format(date = dates, breastfeeding=breastfeeding, formula=formula, total=total, time=breastfeedingTime)
     if(ops == 2):
         msg = "{date}: baby pees. \n".format(date = dates)
     if(ops == 3):
