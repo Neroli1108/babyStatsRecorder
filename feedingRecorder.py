@@ -7,7 +7,7 @@ recordDate = datetime.date.today().strftime("%Y-%m-%d")
 def checkDate():
     global recordDate
     if recordDate != datetime.date.today().strftime("%Y-%m-%d"):
-        recordDate = datetime.date.today().strftime("%Y-&m-%d")
+        recordDate = datetime.date.today().strftime("%Y-%m-%d")
         return False
     return True
 
@@ -17,14 +17,14 @@ def recordSummary():
     if not checkDate():
         summaryMsg = """
                     --------------------------------
-                    |             Name|      Amount|
-                    |             Date|      {date}|
-                    |breastFeedingTime|      {time}|
-                    |    breastFeeding|  {bfamount}|
-                    |    formulaAmount|   {famount}|
-                    |            Total|     {total}|
-                    |        pee times|       {pee}|
-                    |       poop times|      {poop}|
+                    |             Name|      Amount
+                    |             Date|      {date}
+                    |breastFeedingTime|      {time}
+                    |    breastFeeding|  {bfamount}
+                    |    formulaAmount|   {famount}
+                    |            Total|     {total}
+                    |        pee times|       {pee}
+                    |       poop times|      {poop}
                     --------------------------------
                      """.format(date=recordDate, time=totalAmount[0], bfamount=totalAmount[1], famount=totalAmount[2], total=totalAmount[3], pee=totalAmount[4], poop=totalAmount[5])
         print summaryMsg
